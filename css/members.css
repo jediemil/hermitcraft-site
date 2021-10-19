@@ -1,0 +1,20 @@
+html, body {
+    margin: 0 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #474a52;
+}
+
+.contanier {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../resources/mumbo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+}

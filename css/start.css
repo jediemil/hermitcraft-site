@@ -1,0 +1,85 @@
+html, body {
+    margin: 0 0;
+}
+
+.mainContainer {
+    grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
+    grid-template-rows: 30% 20% 15% 30%;
+
+    background-color: black;
+    background-image: url("../resources/grianBase7.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+
+h1 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+    font-size: 70px;
+    font-family: 'Oxygen', sans-serif;
+    color: white;
+    border: white solid 4px;
+    padding: 25px 10px;
+    margin: 0 0;
+
+    display: flex; /*Make text in center of border*/
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    height: min-content;
+
+    animation: animationStart 5s linear 1; /* Animate main title*/
+}
+
+a {
+    grid-row: 3/4;
+
+    text-decoration: none;
+    color: white;
+    background-color: rgba(139,192,237,0.25); /* Make buttons slightly opaque*/
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    height: min-content;
+    padding: 10px 10px;
+    margin: auto;
+    width: 90%;
+    animation: animationButton 8s linear 1;
+}
+
+#about {
+    grid-column: 2/3;
+}
+#quiz {
+    grid-column: 3/4;
+}
+
+@keyframes animationStart { /* Credits till Leon*/
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes animationButton {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+

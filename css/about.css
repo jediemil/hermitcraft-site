@@ -1,0 +1,37 @@
+html, body {
+    margin: 0 0;
+}
+
+body {
+    background-color: #595959ff;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+p {
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    margin: auto;
+    width: 90%;
+}
+
+#img2 {
+    width: 100%;
+}
