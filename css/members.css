@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-color: #474a52;
+    background-color: #0b0b0b;
 }
 
 .contanier {
@@ -14,7 +14,50 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+}
 
-    display: flex;
-    justify-content: center;
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin: auto;
+    height: min-content;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    color: #cccccc;
+    margin: auto;
+    height: min-content;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /*Kant på text för att göra den mer synlig*/
+}
+
+.background {
+    background-color: #657c99;
+    opacity: 0.2;
+}
+
+#youtube {
+    background-color: #ff0000;
+}
+
+#back {
+    background-color: #5a5a5a;
+    height: min-content;
+    width: min-content;
+    margin: 5px 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 5px auto auto auto;
+    border-radius: 25px;
+    font-family: 'Ubuntu', sans-serif;
 }
