@@ -1,7 +1,7 @@
-.contanier {
+.container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 35vh 15vh 10vh 10vh 40vh;
+    grid-template-rows: 35vh 15vh 10vh 10vh 22vh 8vh;
 }
 
 h1 {
@@ -27,4 +27,16 @@ p {
 #back {
     grid-row: 1/2;
     grid-column: 1/2;
+}
+
+button {
+    grid-row: -2/-1;
+}
+
+#previous {
+    grid-column: 1/2;
+}
+
+#next {
+    grid-column: -2/-1;
 }
