@@ -1,4 +1,4 @@
-.container {
+.container { /*Skapar en grid och delar upp skärmen på ett snyggt sätt med hjälp av fr och viewport-height*/
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 35vh 15vh 10vh 10vh 22vh 8vh;
@@ -14,7 +14,7 @@ p {
     grid-row: 3/4;
 }
 
-.background {
+.background { /*Bakgrunden till texten ska hamna bakom texten*/
     grid-column: 1/-1;
     grid-row: 2/4;
 }
@@ -29,11 +29,11 @@ p {
     grid-column: 1/2;
 }
 
-button {
+button { /*Sätter alla knappar på rätt rad*/
     grid-row: -2/-1;
 }
 
-#previous {
+#previous { /*Lägger sedan enskilda knappar i rätt kolumn*/
     grid-column: 1/2;
 }
 

@@ -1,20 +1,20 @@
-.container { /* Container to insert navbar*/
+.container { /*Först en container för att sätta in navbaren, hade kunnat göras på andra sätt också
+    Navbaren förväntar sig att ligga i en grid, så jag valde att lägga den i en grid*/
     display: grid;
     grid-template-columns: 12vw 88vw;
     grid-template-rows: 1fr 11fr;
 }
 
-.image-container {
+.image-container { /*I griden har jag en till container med en grid för alla bilder*/
     grid-row: 2/3;
     grid-column: 2/3;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6px;
-    grid-auto-flow: dense;
 }
 
-h1 {
+h1 { /*Titlen ligger i första griden*/
     grid-column: 2/3;
     grid-row: 1/2;
 }

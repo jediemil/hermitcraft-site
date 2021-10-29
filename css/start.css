@@ -3,64 +3,52 @@ html, body {
 }
 
 .mainContainer {
-    grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
-    grid-template-rows: 30% 20% 15% 30%;
-
-    background-color: black;
-    background-image: url("../resources/grianBase7.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: auto 100%;
     height: 100vh;
     width: 100vw;
-    display: grid;
+
+    background-color: black;
+    background-image: url("../resources/grianBase7.png"); /*Lägger in bakgrundsbilden i startsidan*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; /*Ser till att den stannar i mitten*/
+    background-size: auto 100%; /*Gör så att hela skärmen täcks av bilden*/
 }
 
 h1 {
-    grid-column: 2/4;
-    grid-row: 2/3;
+    height: min-content;
+    padding: 25px 10px;
+    margin: 0 0;
+    border: white solid 4px; /*Gör en snygg fyrkant runt titeln*/
 
     font-size: 70px;
     font-family: 'Oxygen', sans-serif;
     color: white;
-    border: white solid 4px;
-    padding: 25px 10px;
-    margin: 0 0;
 
-    display: flex; /*Make text in center of border*/
+    display: flex; /*Gör så att texten är i mitten av fyrkanten*/
     align-content: center;
     justify-content: center;
     text-align: center;
-    height: min-content;
 
-    animation: animationStart 5s linear 1; /* Animate main title*/
+    animation: animationStart 5s linear 1; /*Animerar*/
 }
 
 a {
-    grid-row: 3/4;
+    height: min-content;
+    width: 90%;
+    padding: 10px 10px;
+    margin: auto;
 
     text-decoration: none;
     color: white;
-    background-color: rgba(139,192,237,0.25); /* Make buttons slightly opaque*/
+    background-color: rgba(139,192,237,0.25); /* Gör knapparna lite genomskindliga*/
     font-size: 200%;
     text-align: center;
     font-family: 'Oxygen', sans-serif;
-    height: min-content;
-    padding: 10px 10px;
-    margin: auto;
-    width: 90%;
-    animation: animationButton 8s linear 1;
+
+    animation: animationButton 8s linear 1; /*Animerar dessa knappar också*/
 }
 
-#about {
-    grid-column: 2/3;
-}
-#quiz {
-    grid-column: 3/4;
-}
-
-@keyframes animationStart { /* Credits till Leon*/
+@keyframes animationStart { /*Animationer för titlen*/
     0% {
         opacity: 0;
     }
@@ -72,7 +60,7 @@ a {
     }
 }
 
-@keyframes animationButton {
+@keyframes animationButton { /*Animation för knapparna*/
     0% {
         opacity: 0;
     }
@@ -86,16 +74,20 @@ a {
 
 @media only screen and (min-device-aspect-ratio: 700/360) {
     .mainContainer {
-        background-size: 100% auto;
+        background-size: 100% auto; /*Gör så att bakgrundsbilden alltid täcker hela skärmen
+        Byter vilken axel (x, y) som prioriteras att göras så stor som möjligt så att inga svarta kanter kommer runt bilden*/
     }
 }
 
-@media only screen and (max-height: 700px) {
-    .mainContainer {
-        grid-template-rows: 10% 30% 35% 10%;
-    }
+@media only screen and (max-height: 375px) { /*Om skärmen är för liten så blir textstorleken mindre på titlen*/
     h1 {
         padding: 15px 10px;
-        font-size: 50px;
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 700px) { /*Om skärmen är för liten så blir textstorleken mindre på titlen*/
+    h1 {
+        font-size: 40px;
     }
 }

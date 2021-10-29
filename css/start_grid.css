@@ -1,0 +1,42 @@
+.mainContainer { /*Skapar en grid*/
+    grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
+    grid-template-rows: 30% 20% 15% 30%; /*Relativa rader för varje element*/
+    display: grid;
+}
+
+h1 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+a {
+    grid-row: 3/4;
+}
+
+#about { /*De två knapparna*/
+    grid-column: 2/3;
+}
+#quiz { /*De två knapparna*/
+    grid-column: 3/4;
+}
+
+@media only screen and (max-height: 700px) { /*Ändrar griden för att passa med kortare skärmar*/
+    .mainContainer {
+        grid-template-rows: 30% 30% 30% 10%;
+    }
+}
+
+@media only screen and (max-width: 700px) { /*Ändrar layout för att passa med tunnare skärmar*/
+    .mainContainer {
+        grid-template-columns: 0.1fr 1fr 1fr 0.1fr; /*Saker går nästan hela vägen ut i kanten*/
+        grid-template-rows: 30% 20% 12% 12% 26%; /*En extra rad*/
+    }
+    #about { /*Knapparna läggs på varsin rad*/
+        grid-row: 3/4;
+        grid-column: 2/4;
+    }
+    #quiz { /*Knapparna läggs på varsin rad*/
+        grid-row: 4/5;
+        grid-column: 2/4;
+    }
+}

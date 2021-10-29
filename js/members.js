@@ -2,6 +2,7 @@ var currentMember = 0
 const members = 26
 
 const membersTable = { //Inte rätt sätt att göra det på, men bra nog
+    //Tabell av alla medlemmar och deras data
     0: ["mumbo.png", 'Mumbo: "The patatman"', "https://www.youtube.com/user/ThatMumboJumbo", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus.", ""],
     1: ["bdub.png", 'BdoubleO100: "The clockmaker"', "https://www.youtube.com/user/BdoubleO100", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus."],
     2: ["cub.png", 'Cubfan35: "The spikey man"', "https://www.youtube.com/user/cubfan135", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus."],
@@ -30,35 +31,36 @@ const membersTable = { //Inte rätt sätt att göra det på, men bra nog
     25: ["cleo.png", 'ZombieCleo: "That artsy person"', "https://www.youtube.com/user/zombiecleo", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus."]
 }
 
-function onNextPressed() {
+function onNextPressed() { //Bunden till next knappen
     currentMember += 1
-    currentMember %= members
+    currentMember %= members //Sätter currentMember till +1 och om den går för långt så hoppar den tillbaka till första member
     setNewMember()
 }
 
-function onPreviousPressed() {
+function onPreviousPressed() { //Bunden till previous knappen
  currentMember -= 1
-    if (currentMember < 0) {
+    if (currentMember < 0) { // Sätter member till -1 och om det går ner i negativt så hoppar den till den sista medlemmen
         currentMember = members - 1
     }
     setNewMember()
 }
 
-async function setNewMember() {
+async function setNewMember() { //Ropas på av båda knappar
     document.getElementsByClassName("container")[0].style.animation = "animationFaddeAway 2s"
-    document.getElementsByClassName("container")[0].style.opacity = "0"
-    await sleep(1900);
-    //document.getElementsByClassName("container")[0].style.animation = "none"
+    document.getElementsByClassName("container")[0].style.opacity = "0" //Sätter animation på hela sidan att den ska långsamt försvinna
+    await sleep(1900); //Väntar i 1,9 sekunder
 
     document.getElementById("title").innerHTML = membersTable[currentMember][1]
     document.getElementById("text").innerHTML = membersTable[currentMember][3]
-    document.getElementById("youtube").href = membersTable[currentMember][2]
+    document.getElementById("youtube").href = membersTable[currentMember][2] //Ändrar text och länkar medans allt är osynligt
     document.getElementsByClassName("container")[0].style.backgroundImage = "url(./../resources/members/" + membersTable[currentMember][0] + ")"
+    //Sätter en ny bakgrundsbild
 
-    document.getElementsByClassName("container")[0].style.opacity = "1"
     document.getElementsByClassName("container")[0].style.animation = "animationFaddeForward 2s"
+    document.getElementsByClassName("container")[0].style.opacity = "1"
+    //Sätter en animation att allt ska komma fram igen
 }
 
-function sleep(ms) {
+function sleep(ms) { //Vänta funktionen
     return new Promise(resolve => setTimeout(resolve, ms));
 }

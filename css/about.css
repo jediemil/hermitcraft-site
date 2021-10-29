@@ -1,4 +1,4 @@
-html, body {
+html, body { /*Ingen marginal på body och html*/
     margin: 0 0;
 }
 
@@ -6,7 +6,7 @@ body {
     background-color: #595959ff;
 }
 
-h1 {
+h1 { /*Huvudtitel på sidan*/
     font-size: 50px;
     font-family: 'Oxygen', sans-serif;
     text-align: center;
@@ -14,24 +14,20 @@ h1 {
 }
 
 h2 {
-    margin-top: 40px;
+    margin-top: 40px; /*Mer luft mellan del-titlarna*/
     font-size: 30px;
     font-family: 'Oxygen', sans-serif;
     text-align: center;
     color: white;
 }
 
-p {
+p { /*Markerar all brödtext på sidan*/
     color: white;
-    padding: 5px 10px;
+    padding: 5px 10px; /*Får det att se mer luftigt ut*/
     font-family: 'Ubuntu', sans-serif;
 }
 
-img {
+img { /*Gör så att bilderna inte går hela vägen ut i kanterna*/
     margin: auto;
     width: 90%;
-}
-
-#img2 {
-    width: 100%;
 }

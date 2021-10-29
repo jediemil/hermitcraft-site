@@ -1,24 +1,26 @@
+/*Enskild css fil för alla html sidor som har med navbaren*/
+
 .navBar {
-    position: fixed;
+    position: fixed; /*Få den att stanna i kanten*/
     top: 0;
     left: 0;
     grid-column: 1/2;
     grid-row: 1/-1;
-    width: 12vw;
+    width: 12vw; /*Navbaren tar 12% av skärmens bredd, skulle kunna skrivas som 12%, men det gav ett konstigt beteende*/
     height: 100%;
     background-color: #ff6f19ff;
 }
 
-.navBar a {
+.navBar a { /*Markerar alla länkar i navbaren*/
     text-decoration: none;
     display: block;
     padding: 20px 0;
     text-align: center;
-    font-size: 2vw; /* Font size depending on screen width*/
+    font-size: 2vw; /*Textstorlek beror på bredden på skärmen*/
     font-family: Helvetica, sans-serif;
     color: black;
 }
 
 .navBar a:hover {
-    background-color: #994d27;
+    background-color: #994d27; /*Byter färg när man har musen på länkarna*/
 }
