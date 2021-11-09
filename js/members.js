@@ -53,7 +53,7 @@ async function setNewMember() { //Ropas på av båda knappar
     document.getElementById("title").innerHTML = membersTable[currentMember][1]
     document.getElementById("text").innerHTML = membersTable[currentMember][3]
     document.getElementById("youtube").href = membersTable[currentMember][2] //Ändrar text och länkar medans allt är osynligt
-    document.getElementsByClassName("container")[0].style.backgroundImage = "url(./../resources/members/" + membersTable[currentMember][0] + ")"
+    document.getElementsByClassName("container")[0].style.backgroundImage = "url(./resources/members/" + membersTable[currentMember][0] + ")"
     //Sätter en ny bakgrundsbild
 
     document.getElementsByClassName("container")[0].style.animation = "animationFaddeForward 2s"
@@ -61,16 +61,6 @@ async function setNewMember() { //Ropas på av båda knappar
     //Sätter en animation att allt ska komma fram igen
 }
 
-function preloadImage(url){
-    const img = new Image();
-    img.src = url;
-    return img
-}
-
 function sleep(ms) { //Vänta funktionen
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-membersTable.forEach((num, index) =>{ //Laddar in bilderna i förväg
-    preloadImage(index["url(./../resources/members/" + index[0] + ")"])
-})
