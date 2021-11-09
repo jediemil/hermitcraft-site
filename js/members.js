@@ -1,7 +1,7 @@
 var currentMember = 0
 const members = 26
 
-const membersTable = { //Inte rätt sätt att göra det på, men bra nog
+const membersTable = { //Inte rätt sätt att göra det på, men bra nog. Kunde göras finare med en json fil.
     //Tabell av alla medlemmar och deras data
     0: ["mumbo.png", 'Mumbo: "The patatman"', "https://www.youtube.com/user/ThatMumboJumbo", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus.", ""],
     1: ["bdub.png", 'BdoubleO100: "The clockmaker"', "https://www.youtube.com/user/BdoubleO100", "Maecenas augue sapien, semper in turpis sed, tincidunt fringilla lacus."],

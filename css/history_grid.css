@@ -1,3 +1,5 @@
+/*Sista css filen jag kommenterade, därför är kommentarerna mindre specifika*/
+
 .contanier {
     display: grid;
     grid-template-columns: 12vw 0.1fr 1fr 0.1fr; /*Skapar en grid med plats för navbar och med automatiska rows*/

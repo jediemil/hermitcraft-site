@@ -1,12 +1,12 @@
 /*Enskild css fil för alla html sidor som har med navbaren*/
 
 .navBar {
-    position: fixed; /*Få den att stanna i kanten*/
+    position: fixed; /*Få den att stanna i kanten, jag har provat position sticky och 0.1px på top och left, men det blev skummt*/
     top: 0;
     left: 0;
     grid-column: 1/2;
     grid-row: 1/-1;
-    width: 12vw; /*Navbaren tar 12% av skärmens bredd, skulle kunna skrivas som 12%, men det gav ett konstigt beteende*/
+    width: 12vw; /*Navbaren tar 12% av skärmens bredd, skulle kunna skrivas som 12% eller 100% när den ligger i grid, men det gav ett konstigt beteende*/
     height: 100%;
     background-color: #ff6f19ff;
 }
