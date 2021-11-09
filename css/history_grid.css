@@ -1,0 +1,21 @@
+.contanier {
+    display: grid;
+    grid-template-columns: 12vw 0.1fr 1fr 0.1fr; /*Skapar en grid med plats för navbar och med automatiska rows*/
+    grid-auto-rows: auto;
+}
+
+p {
+    grid-column: 3/4;
+}
+img {
+    grid-column: 2/-1; /*Bilderna är lite bredare än texten*/
+}
+h1 {
+    grid-column: 2/-1;
+}
+h2 {
+    grid-column: 3/4;
+}
+ol {
+    grid-column: 3/4;
+}

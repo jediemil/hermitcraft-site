@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+}
+
+body {
+    background-color: #5a5a5a;
+}
+
+img { /*Gör så att bilderna inte går in i kanten*/
+    width: 90%;
+    margin: 10px auto;
+}
+
+li a { /*Länkarna i listan*/
+    text-decoration: none;
+    color: #a6ddff;
+    padding: 5px 10px;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ol { /*Tar bort numrerna på listan och de automatiska margin och padding som förstör layouten*/
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+h1 { /*Huvudtitel*/
+    font-size: 50px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-top: 40px; /*Mer luft mellan del-titlarna, precis som about.css*/
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+p {
+    color: white;
+    padding: 5px 10px; /*Mer luftig text, liknar about.css*/
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#content { /*Får content h2 att vara över listan*/
+    text-align: left;
+}
