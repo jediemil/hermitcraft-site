@@ -13,7 +13,6 @@ h1 {
 }
 
 img {
-    max-width: 100%;
-    height: 100%; /*Sträcker på bilderna lite, men det märks inte, för att jag har satt ungefär lika stora bilder bredvid varandra*/
+    width: 100%;
     margin: auto;
 }

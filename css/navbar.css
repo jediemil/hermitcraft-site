@@ -17,6 +17,7 @@
     padding: 20px 0;
     text-align: center;
     font-size: 2vw; /*Textstorlek beror på bredden på skärmen*/
+    min-font-size: 12px;
     font-family: Helvetica, sans-serif;
     color: black;
 }
