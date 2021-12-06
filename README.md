@@ -1,4 +1,5 @@
-# hermitcraft-site
-School project in web-development
+# Hermitcraft Website
 
-A website spreading info about Hermitcraft
+This is a school project in web development
+
+It is a website spreqding info and encouraging people to watch Hermitcraft
